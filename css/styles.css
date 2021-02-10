@@ -173,6 +173,7 @@ table{
   }
 }
 
+
 @keyframes cloud-move1 {
   from {
     transform: translate(0, 0);
@@ -204,6 +205,14 @@ animation: 5s color-change infinite alternate linear;
 }
 
 /* **** MAIN: WORK PAGE **** */
+
+/* start grid fallback */
+.grid__item {
+ display: inline-block;
+ width: 33%;
+}
+/* end grid fallback */
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -282,6 +291,7 @@ footer{
   text-align: center;
   padding-bottom: 1%;
 }
+
 
 
 
