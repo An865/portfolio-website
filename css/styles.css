@@ -209,19 +209,25 @@ animation: 5s color-change infinite alternate linear;
 }
 /* end grid fallback */
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-}
+@supports (display: grid) {
+ .grid {
+   display: grid;
+   /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: 20px;
+   margin: 0;
 
-.grid__item {
-  background-color: var(--lightgray);
-}
-
-.grid__item:last-child {
-  grid-column: 3 / 3;
-  grid-row: 1 / 3;
+ }
+ .grid__item {
+   background-color: var(--lightgray);
+   width: auto;
+   min-height: auto;
+   margin: 0;
+ }
+ .grid__item:last-child {
+   grid-column: 3 / 3;
+   grid-row: 1 / 3;
+ }
 }
 
 /* **** BUTTONS **** */

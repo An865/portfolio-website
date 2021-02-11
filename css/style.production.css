@@ -199,6 +199,7 @@ table{
   }
 }
 
+
 @-webkit-keyframes cloud-move1 {
   from {
     -webkit-transform: translate(0, 0);
@@ -209,6 +210,7 @@ table{
             transform: translate(-200px, 0);
   }
 }
+
 
 @keyframes cloud-move1 {
   from {
@@ -259,6 +261,7 @@ table{
 }
 
 /* **** MAIN: WORK PAGE **** */
+
 /* start grid fallback */
 .grid__item {
  display: inline-block;
@@ -266,24 +269,30 @@ table{
 }
 /* end grid fallback */
 
-.grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-}
+@supports (display: grid) {
+ .grid {
+   display: -ms-grid;
+   display: grid;
+   /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+   -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: 20px;
+   margin: 0;
 
-.grid__item {
-  background-color: #D3D3D3;
-}
-
-.grid__item:last-child {
-  -ms-grid-column: 3;
-  grid-column: 3 / 3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1 / 3;
+ }
+ .grid__item {
+   background-color: #D3D3D3;
+   width: auto;
+   min-height: auto;
+   margin: 0;
+ }
+ .grid__item:last-child {
+   -ms-grid-column: 3;
+   grid-column: 3 / 3;
+   -ms-grid-row: 1;
+   -ms-grid-row-span: 2;
+   grid-row: 1 / 3;
+ }
 }
 
 /* **** BUTTONS **** */
@@ -402,6 +411,7 @@ footer{
   text-align: center;
   padding-bottom: 1%;
 }
+
 
 
 
