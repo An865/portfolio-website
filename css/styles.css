@@ -327,18 +327,14 @@ footer p {
     grid-gap: 10px;
   }
 
-/* **** MEDIA QUERIES **** */
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
 
-@media all and (max-width: 750px){
-    .grid{grid-gap: 10px;
-    }
-    .grid__item:last-child {
-      grid-column: auto / auto;
-      grid-row: auto / auto;
-    }
-    h1 {
-      font-size: 22px;
-    }
+  h1 {
+    font-size: 22px;
+  }
 }
 
 @media all and (max-width: 550px) {
