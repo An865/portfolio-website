@@ -56,7 +56,6 @@ a:active{
 }
 
 
-
 /* **** HEADER **** */
 .page-header{
   display: -webkit-box;
@@ -260,6 +259,13 @@ table{
 }
 
 /* **** MAIN: WORK PAGE **** */
+/* start grid fallback */
+.grid__item {
+ display: inline-block;
+ width: 33%;
+}
+/* end grid fallback */
+
 .grid {
   display: -ms-grid;
   display: grid;
