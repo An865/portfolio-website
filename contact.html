@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Contact Anne Spire</title>
+        <title>Contact</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" sizes="180x180" href="img/as-apple-touch-icon.png">
@@ -20,7 +20,9 @@
      <body>
 <!-- Header including the logo and the main navigation -->
        <header class="page-header">
-           <img src="img/aspire-logo.png" alt="Anne Spire" class="page-header__item logo"> <!-- logo -->
+           <a href="https://An865.github.io/portfolio-website/">
+              <img src="img/aspire-logo.png" class="page-header__item logo" alt="Anne Spire">
+           </a>
            <nav class="main-navigation page-header__item">
                <ul role="menubar" class="navigation-list">
                    <li role="presentation">
@@ -37,30 +39,46 @@
 
 <!-- Main content -->
         <main>
-            <h1>Contact Me</h1>
-            <a href="tel:+1520-664-4056">520-664-4056</a>
-            <a href = "mailto:spire@email.arizona.edu">spire@email.arizona.edu</a>
-            <a href="https://thehappypuppysite.com/wp-content/uploads/2018/10/dapple-dachshund-long.jpg" target="_blank" rel="noopener">Check out this happy puppy!</a> <!-- call to action -->
+            <h1>Contact</h1>
+            <!-- container -->
+            <div class="contact-container">
+                  <!-- flex-item -->
+                  <div class="flex-item">
+                      <p>Phone:
+                          <a href="tel:+1520-664-4056">520-664-4056</a>
+                      </p>
 
-            <form action="#" method="POST" id="contact-form">
-                <label for="fname">First Name*</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your first name.." required>
+                      <p>Email:
+                          <a href = "mailto:spire@email.arizona.edu">spire@email.arizona.edu</a>
+                      </p>
+                  </div>
 
-                <label for="lname">Last Name*</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+                  <!-- flex-item -->
+                  <div class="flex-item">
+                      <form action="#" method="POST" id="contact-form">
+                          <label for="fname">First Name*</label>
+                          <input type="text" id="fname" class="form-text-input" name="firstname" placeholder="Your first name.." required>
 
-                <label for="email">Email*</label>
-                <input id="email" type="email" required>
+                          <label for="lname">Last Name*</label>
+                          <input type="text" id="lname" class="form-text-input" name="lastname" placeholder="Your last name.." required>
 
-                <label for="telephone">Telephone</label>
-                <input id="telephone" type="tel">
+                          <label for="email">Email*</label>
+                          <input id="email" class="form-text-input" type="email" required>
 
-                <label for="message">Message*</label>
-                <textarea id="message" name="message" placeholder="Write your message.." required maxlength="240"></textarea>
+                          <label for="telephone">Telephone</label>
+                          <input id="telephone" class="form-text-input" type="tel">
 
-                <button type="submit" form="contact-form" value="Submit">Submit</button>
-                <p>*Required</p>
-            </form>
+                          <label for="message">Message*</label>
+                          <textarea id="message" class="form-text-input" name="message" placeholder="Write your message.." required maxlength="240"></textarea>
+
+                          <!-- honeypot for spam -->
+                          <input id="website" name="website" type="text" value=""  />
+
+                          <button type="submit" form="contact-form" value="Submit">Submit</button>
+                          <p>*Required</p>
+                          </form>
+                      </div> <!-- /.flex-item -->
+            </div> <!-- /.contact-container -->
         </main>
 
 <!-- Footer with links to social media profiles -->
