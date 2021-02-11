@@ -1,0 +1,23 @@
+<script>
+$('form').submit(function(){
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+        if($('input#website').val().length != 0){
+=======
+        if ($('input#website').val().length != 0) {
+>>>>>>> Stashed changes
+=======
+        if ($('input#website').val().length != 0) {
+>>>>>>> Stashed changes
+=======
+        if ($('input#website').val().length != 0) {
+>>>>>>> Stashed changes
+=======
+        if ($('input#website').val().length != 0) {
+>>>>>>> Stashed changes
+            return false;
+        }
+});
+</script>
