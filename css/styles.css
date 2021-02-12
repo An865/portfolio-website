@@ -200,6 +200,7 @@ table {
 }
 
 /* **** MAIN: WORK PAGE **** */
+
 /* start grid fallback */
 .grid__item {
   display: inline-block;
